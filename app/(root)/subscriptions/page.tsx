@@ -1,4 +1,3 @@
-import { PricingTable } from "@clerk/nextjs";
 
 export default function SubscriptionsPage() {
     return (
@@ -11,7 +10,7 @@ export default function SubscriptionsPage() {
             </div>
 
             <div className="clerk-pricing-container">
-                <PricingTable />
+                PricingTable
             </div>
         </div>
     );
