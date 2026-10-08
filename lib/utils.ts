@@ -1,4 +1,4 @@
-import { TextSegment } from "@/types";
+import { TextSegment } from '@/types';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { DEFAULT_VOICE, voiceOptions } from './constants';
@@ -152,8 +152,7 @@ export async function parsePDFFile(file: File) {
             content: segments,
             cover: coverDataURL,
         };
-    } 
-    catch (error) {
+    } catch (error) {
         console.error('Error parsing PDF:', error);
         throw new Error(`Failed to parse PDF file: ${error instanceof Error ? error.message : String(error)}`);
     }
