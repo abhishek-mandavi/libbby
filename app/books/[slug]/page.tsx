@@ -1,10 +1,9 @@
+import VapiControls from "@/components/VapiControls";
+import { getBookBySlug } from "@/lib/actions/book.actions";
 import { auth } from "@clerk/nextjs/server";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-
-import VapiControls from "@/components/VapiControls";
-import { getBookBySlug } from "@/lib/actions/book.actions";
 
 export default async function BookDetailsPage({
     params,
@@ -23,7 +22,6 @@ export default async function BookDetailsPage({
     if (!result.success || !result.data) {
         redirect("/");
     }
-
     const book = result.data;
 
     return (
@@ -31,7 +29,6 @@ export default async function BookDetailsPage({
             <Link href="/" className="back-btn-floating">
                 <ArrowLeft className="size-6 text-[#212a3b]" />
             </Link>
-
             <VapiControls book={book} />
         </div>
     );

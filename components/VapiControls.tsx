@@ -1,17 +1,20 @@
 'use client';
 
 import Transcript from "@/components/Transcript";
+import useVapi from "@/hooks/useVapi";
+import { IBook } from "@/types";
 import { Mic, MicOff } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { toast } from "sonner";
-const VapiControls = ({ book }: {book: Ibook}) => {
+
+const VapiControls = ({ book }: { book: IBook }) => {
     const { status, isActive, messages, currentMessage, currentUserMessage, duration, start, stop, clearError, limitError, isBillingError, maxDurationSeconds } = useVapi(book)
     const router = useRouter();
 
     useEffect(() => {
-        if(limitError){
+        if (limitError) {
             toast.error(limitError);
             if (isBillingError) {
                 router.push("/subscriptions");
@@ -20,7 +23,7 @@ const VapiControls = ({ book }: {book: Ibook}) => {
             }
             clearError();
         }
-    },[isBillingError, limitError, router, clearError]);
+    }, [isBillingError, limitError, router, clearError]);
 
     const formatDuration = (seconds: number) => {
         const mins = Math.floor(seconds / 60);
@@ -41,7 +44,7 @@ const VapiControls = ({ book }: {book: Ibook}) => {
 
     const statusDisplay = getStatusDisplay();
 
-    return(
+    return (
         <>
             <div className="max-w-4xl mx-auto flex flex-col gap-8">
                 {/* Header Card */}
@@ -100,15 +103,15 @@ const VapiControls = ({ book }: {book: Ibook}) => {
                     </div>
                 </div>
 
-                <div className="vapi-transcript-wrapper">
-                    <div className="transcript-container min-h-100">
-                        <Transcript
-                            messages={messages}
-                            currentMessage={currentMessage}
-                            currentUserMessage={currentUserMessage}
-                        />
-                    </div>
+            <div className="vapi-transcript-wrapper">
+                <div className="transcript-container min-h-100">
+                    <Transcript
+                        messages={messages}
+                        currentMessage={currentMessage}
+                        currentUserMessage={currentUserMessage}
+                    />
                 </div>
+            </div>
             </div>
         </>
     )

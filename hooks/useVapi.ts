@@ -1,16 +1,13 @@
 'use client';
 
-
-
-import { useAuth } from '@clerk/nextjs';
-import Vapi from '@vapi-ai/web';
-import { useCallback, useEffect, useRef, useState } from 'react';
-
 import { useSubscription } from '@/hooks/useSubscription';
 import { endVoiceSession, startVoiceSession } from '@/lib/actions/session.actions';
 import { ASSISTANT_ID, DEFAULT_VOICE, VOICE_SETTINGS } from '@/lib/constants';
 import { getVoice } from '@/lib/utils';
 import { IBook, Messages } from '@/types';
+import { useAuth } from '@clerk/nextjs';
+import Vapi from '@vapi-ai/web';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 export function useLatestRef<T>(value: T) {
     const ref = useRef(value);
@@ -43,7 +40,6 @@ export type CallStatus = 'idle' | 'connecting' | 'starting' | 'listening' | 'thi
 export function useVapi(book: IBook) {
     const { userId } = useAuth();
     const { limits } = useSubscription();
-
     const [status, setStatus] = useState<CallStatus>('idle');
     const [messages, setMessages] = useState<Messages[]>([]);
     const [currentMessage, setCurrentMessage] = useState('');

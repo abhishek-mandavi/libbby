@@ -97,7 +97,7 @@ export const ASSISTANT_ID = process.env.NEXT_PUBLIC_ASSISTANT_ID!;
 
 export const voiceOptions = {
     // Male voices
-    sagar: { id: 'CYw3kZ02Hs0563khs1Fj', name: 'Sagar', description: 'Young male,Indian-American, casual & conversational' },
+    sagar: { id: 'CYw3kZ02Hs0563khs1Fj', name: 'Sagar', description: 'Young male, Indian, casual' },
     daniel: { id: 'onwK4e9ZLuTAKqWW03F9', name: 'Daniel', description: 'Middle-aged male, British, authoritative but warm' },
     chris: { id: 'iP95p4xoKVk53GoZ742B', name: 'Chris', description: 'Male, casual & easy-going' },
     // Female voices
