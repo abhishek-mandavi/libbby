@@ -1,5 +1,5 @@
 ## Introduction
-Libby is an AI-powered platform that lets you have real-time voice conversations with your books. Built with Next.js 16, Vapi, and MongoDB, it transforms PDFs into interactive entities using natural voice synthesis. Choose from custom ElevenLabs personas to chat with your library, request summaries, and view live transcripts—all wrapped in a sleek Shadcn UI with Clerk authentication.
+Libbby is an AI-powered platform that lets you have real-time voice conversations with your books. Built with Next.js 16, Vapi, and MongoDB, it transforms PDFs into interactive entities using natural voice synthesis. Choose from custom ElevenLabs personas to chat with your library, request summaries, and view live transcripts—all wrapped in a sleek Shadcn UI with Clerk authentication.
 
 ```bash
 Project_Url - https://libbby-ai.vercel.app/
@@ -10,17 +10,17 @@ Project_Url - https://libbby-ai.vercel.app/
 
 - CodeRabbit is an AI-powered code review platform that provides contextual, line-by-line feedback on pull requests. It automates the review process by identifying bugs, suggesting optimizations, and ensuring coding standards are met, significantly reducing the manual effort for developers and improving code quality.
 
-- ElevenLabs is an advanced AI audio platform providing lifelike text-to-speech. It powers the voice previews in Bookified, allowing users to hear and select from a variety of natural-sounding AI personas before starting a conversation.
+- ElevenLabs is an advanced AI audio platform providing lifelike text-to-speech. It powers the voice previews in Libbby, allowing users to hear and select from a variety of natural-sounding AI personas before starting a conversation.
 
 - MongoDB is a flexible, document-based NoSQL database designed for scalability and developer ease. Combined with Mongoose, it serves as the core storage for user libraries, book metadata, and conversation transcripts.
 
-- Next.js is a powerful React framework for building full-stack web applications. It handles the core application logic, server-side rendering, and API routes, enabling a fast and responsive interface for the Bookified platform.
+- Next.js is a powerful React framework for building full-stack web applications. It handles the core application logic, server-side rendering, and API routes, enabling a fast and responsive interface for the Libbby platform.
 
 - Shadcn UI is a collection of re-usable, accessible components built with Tailwind CSS and Radix UI. It allows for the creation of a clean, modular, and professional-grade user interface that is easy to customize and theme.
 
 - TypeScript is a superset of JavaScript that adds static typing, providing better tooling, code quality, and error detection. It ensures the application remains maintainable and robust as the codebase scales.
 
-- Vapi is a specialized Voice AI platform that enables real-time, low-latency conversational audio. It serves as the primary engine for Bookified, allowing users to have seamless, back-and-forth verbal interactions with their uploaded content.
+- Vapi is a specialized Voice AI platform that enables real-time, low-latency conversational audio. It serves as the primary engine for Libbby, allowing users to have seamless, back-and-forth verbal interactions with their uploaded content.
 
 ## Features
 👉 PDF Upload & Ingestion: Seamlessly upload PDF books with automated text extraction, intelligent chunking, and high-dimensional embeddings for precise context retrieval.
