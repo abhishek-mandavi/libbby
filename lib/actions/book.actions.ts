@@ -79,8 +79,6 @@ export const createBook = async (data: CreateBook) => {
                 alreadyExists: true,
             }
         }
-
-        //Check subscription limits before creating a book
         const { getUserPlan } = await import("@/lib/subscription.server");
         const { PLAN_LIMITS } = await import("@/lib/subscription-constants");
 
